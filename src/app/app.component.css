@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.sidenav {
+  padding: 25px 75px 0 0;
+}
+
+.menu-button {
+  cursor: pointer;
+  padding: 10px;
+}
+
+md-list md-list-item.nav-item {
+  display: inline-flex;
+  padding-bottom: 5px;
+}
+md-list md-list-item.nav-item a {
+  color: white;
+}
+
+md-list md-list-item a {
+  text-decoration: none;
+  color: black;
+}
