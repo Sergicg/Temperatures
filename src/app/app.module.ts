@@ -10,7 +10,9 @@ import {
   MdToolbarModule,
   MdListModule,
   MdGridListModule,
-  MdIconModule
+  MdIconModule,
+  MdTabsModule,
+  MdTableModule
 } from '@angular/material';
 
 import 'hammerjs';
@@ -28,6 +30,8 @@ import 'hammerjs';
     MdToolbarModule,
     MdListModule,
     MdIconModule,
+    MdTabsModule,
+    MdTableModule,
     MdGridListModule,
     AppRoutingModule,
   ],

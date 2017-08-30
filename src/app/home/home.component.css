@@ -5,4 +5,10 @@ md-grid-tile {
 
 md-grid-list {
   height: 100%;
+  font-size: 35px;
 }
+
+md-list-item {
+  border-bottom: 1px solid;
+}
+

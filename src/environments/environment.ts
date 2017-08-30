@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   apiKey: '919e08f1ad070b28c431c21e08f95d44',
-  apiUrl: 'http://api.openweathermap.org/data/2.5/weather?id='
+  apiUrl: 'http://api.openweathermap.org',
 };

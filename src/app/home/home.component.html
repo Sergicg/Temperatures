@@ -1,17 +1,20 @@
-<md-grid-list cols="2"  rowHeight="2:1" *ngIf="!isRecord">
+<md-grid-list cols="2"  rowHeight="2:1" *ngIf="!isRecord && !isEmpty">
   <md-grid-tile *ngFor="let city of cities">
-    {{ city.data.name }}<br/>
-    {{ city.data.temp }}  Cº
+      {{ city.data.name }}<br>
+      {{ city.data.temp }}  Cº
   </md-grid-tile>
 </md-grid-list>
 
-<div *ngIf="isRecord">
-  <p>Record</p>
-  <div *ngFor="let city of cities">
-    {{ city.data.name }}<br/>
-    <div *ngFor="let temp of city.record">
-      {{ temp.time }}<br/>
-      {{ temp.temp }}  Cº
-    </div>
-  </div>
+  <md-tab-group *ngIf="isRecord && !isEmpty">
+    <md-tab *ngFor="let city of cities" label="{{ city.data.name }}">
+      <md-list>
+        <md-list-item  *ngFor="let temp of city.record">
+          <h4 md-line> {{ temp.time | date: 'short' }} : {{ temp.temp }} Cº</h4>
+        </md-list-item>
+      </md-list>
+    </md-tab>
+  </md-tab-group>
+
+<div *ngIf="isEmpty">
+  <p>In this moment there aren't content</p>
 </div>
